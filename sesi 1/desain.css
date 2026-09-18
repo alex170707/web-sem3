@@ -1,0 +1,59 @@
+/* Aturan untuk seluruh halaman web */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  
+  /* Setting background image */
+  background: maroon;
+  background-position: top;
+  background-size: 200px;
+}
+
+.card-box {
+  background-color: rgba(255, 255, 255, 0.35); 
+  padding: 30px 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* --- Aturan untuk Teks di dalam Kotak --- */
+.card-box h1 {
+  margin: 6px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Aturan untuk judul h1 */
+h1 {
+  color: black;
+  text-align: center;
+  padding-top: 2px;
+}
+
+/* Styling pendukung untuk area produk */
+.container-produk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card-produk {
+  background-color: rgba(255, 255, 255, 0.9); /* Kotak putih transparan untuk teks */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.card-produk h2 {
+    margin: 10px;
+}
+
+.card-produk p {
+  color: #333333;
+  line-height: 1.6;
+  text-align: justify;
+}
