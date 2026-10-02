@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Diri</title>
+    <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+    <form autocomplete="off">
+        <h1>Form Data Diri</h1>
+
+        <label for="nama">Nama lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Isi nama lengkap di sini" required />
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" placeholder="Isi alamat di sini" required></textarea>
+
+        <label for="kota">Kota</label>
+        <select id="kota" name="kota">
+            <option value="">Pilih Kota</option>
+            <option value="bandung">Bandung</option>
+            <option value="jakarta">Jakarta</option>
+            <option value="surabaya">Surabaya</option>
+        </select>
+
+        <label for="provinsi">Provinsi</label>
+        <select id="provinsi" name="provinsi">
+            <option value="">Pilih Provinsi</option>
+            <option value="jawa barat">Jawa Barat</option>
+            <option value="jawa tengah">Jawa Tengah</option>
+            <option value="jawa timur">Jawa Timur</option>
+        </select>
+
+        <label for="gender">Jenis kelamin</label>
+        <select id="gender" name="gender">
+            <option value="">Pilih Gender</option>
+            <option value="laki-laki">Laki-Laki</option>
+            <option value="perempuan">Perempuan</option>
+        </select>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+
+</html>

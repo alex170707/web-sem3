@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #172b4d;
+    --blue: #2f6fed;
+    --text: #203047;
+    --muted: #708096;
+    --line: #d9e1ec;
+    --surface: #ffffff;
+    --background: #eef3f8;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 16px;
+    place-items: center;
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e9f0f8, var(--background));
+}
+
+form {
+    width: min(100%, 520px);
+    padding: 36px;
+    border: 1px solid rgba(23, 43, 77, 0.08);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: 0 20px 50px rgba(23, 43, 77, 0.12);
+}
+
+h1 {
+    margin: 0 0 30px;
+    color: var(--navy);
+    font-size: clamp(28px, 5vw, 38px);
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+label + input,
+label + textarea,
+label + select {
+        margin-top: 0;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin-top: 14px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fbfcfe;
+    color: var(--text);
+    font: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input,
+select {
+    min-height: 48px;
+    padding: 0 14px;
+}
+
+textarea {
+    min-height: 112px;
+    padding: 13px 14px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--blue);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.12);
+}
+
+button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 28px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--navy);
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: var(--blue);
+    box-shadow: 0 8px 18px rgba(47, 111, 237, 0.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    form {
+        padding: 26px 20px;
+        border-radius: 14px;
+    }
+}

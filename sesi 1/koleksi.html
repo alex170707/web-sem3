@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi | Axel Xendra</title>
+    <link rel="stylesheet" href="desain.css">
+</head>
+
+<body>
+    <header class="card-box compact-header">
+        <a class="brand-mark" href="home.html" aria-label="Kembali ke Beranda">MK</a>
+        <div class="header-copy">
+            <p class="eyebrow">AXEL XENDRA</p>
+            <h1>Koleksi pilihan</h1>
+            <p class="tagline">Detail kecil, kesan yang bertahan lama.</p>
+        </div>
+    </header>
+    <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="home.html">Beranda</a>
+        <a class="active" href="koleksi.html">Koleksi</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">SHOP THE EDIT</p>
+            <h2>Produk yang dipilih dengan niat</h2>
+            <p>Axel Xendra menghadirkan barang esensial yang mudah dipadukan, nyaman digunakan, dan punya karakter yang kuat.</p>
+        </section>
+        <section class="collection-grid" aria-label="Daftar koleksi">
+            <article class="collection-item">
+                <button class="collection-summary" type="button" data-dialog="parfum-dialog">
+                    <img src="classy men.png" alt="Old Money Men Parfume">
+                    <div>
+                        <p class="eyebrow">01 / FRAGRANCE</p>
+                        <h3>Old Money Men Parfume</h3>
+                        <p>Aroma kayu hangat dan rempah segar untuk menemani hari dengan kesan maskulin yang elegan.</p>
+                        <span class="dropdown-hint">Lihat detail <span aria-hidden="true">+</span></span>
+                    </div>
+                </button>
+            </article>
+            <article class="collection-item">
+                <button class="collection-summary" type="button" data-dialog="baju-dialog">
+                    <img src="baju.png" alt="Karla Shirt">
+                    <div>
+                        <p class="eyebrow">02 / APPAREL</p>
+                        <h3>Karla Shirt</h3>
+                        <p>Potongan rapi dengan bahan yang nyaman, dibuat untuk bergerak dari agenda santai ke semi-formal.</p>
+                        <span class="dropdown-hint">Lihat detail <span aria-hidden="true">+</span></span>
+                    </div>
+                </button>
+            </article>
+        </section>
+        <dialog class="product-dialog" id="parfum-dialog">
+            <button class="dialog-close" type="button" aria-label="Tutup detail produk">&times;</button>
+            <p class="eyebrow">01 / FRAGRANCE</p>
+            <h2>Old Money Men Parfume</h2>
+            <p>Diformulasikan dengan konsentrasi minyak wangi berkualitas tinggi, aromanya dapat bertahan hingga 12 jam. Perpaduan tiap tingkat aroma terasa hangat, segar, dan tidak menyengat.</p>
+            <p class="product-spec">Karakter: woody, spicy, warm<br>Rekomendasi: acara malam dan momen spesial</p>
+            <a class="button-link" href="kontak.html">Tanyakan ketersediaan <span aria-hidden="true">-></span></a>
+        </dialog>
+        <dialog class="product-dialog" id="baju-dialog">
+            <button class="dialog-close" type="button" aria-label="Tutup detail produk">&times;</button>
+            <p class="eyebrow">02 / APPAREL</p>
+            <h2>Karla Shirt</h2>
+            <p>Menggunakan kain 280 GSM yang halus, adem, lentur, dan tidak mudah kusut. Potongan fit memberi siluet yang rapi tanpa membatasi gerak.</p>
+            <p class="product-spec">Bahan: cotton stretch<br>Rekomendasi: gaya harian dan semi-formal</p>
+            <a class="button-link" href="kontak.html">Tanyakan ketersediaan <span aria-hidden="true">-></span></a>
+        </dialog>
+        <a class="button-link" href="kontak.html">Tanyakan ketersediaan <span aria-hidden="true">-></span></a>
+    </main>
+    <footer class="site-footer">Axel Xendra <span>|</span> Curated pieces for everyday confidence.</footer>
+    <script src="transisi.js"></script>
+    <script src="koleksi.js"></script>
+</body>
+
+</html>
