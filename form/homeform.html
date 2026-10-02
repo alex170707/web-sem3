@@ -15,6 +15,12 @@
         <label for="nama">Nama lengkap</label>
         <input type="text" id="nama" name="nama" placeholder="Isi nama lengkap di sini" required />
 
+        <label for="tanggal-lahir">Tanggal lahir</label>
+        <input type="date" id="tanggal-lahir" name="tanggal-lahir" required />
+
+        <label for="usia">Usia</label>
+        <input type="number" id="usia" name="usia" placeholder="Otomatis dari tanggal lahir" readonly required />
+
         <label for="alamat">Alamat</label>
         <textarea id="alamat" name="alamat" placeholder="Isi alamat di sini" required></textarea>
 
@@ -43,6 +49,7 @@
 
         <button type="submit">Kirim</button>
     </form>
+    <script src="usia.js"></script>
 </body>
 
 </html>

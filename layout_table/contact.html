@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Website Saya</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="header-cell" colspan="4">
+                <h1>My Website</h1>
+                <p>Silakan kirim pesan melalui form contact.</p>
+                <img class="header-logo" src="logo.png" alt="Logo website">
+            </td>
+        </tr>
+        <tr>
+            <td><span class="box-logo" aria-hidden="true">⌂</span><h2>Home</h2><p>Halaman utama website.</p><a class="continue-button" href="home.html">Buka Home</a></td>
+            <td><span class="box-logo" aria-hidden="true">♙</span><h2>Profile</h2><p>Informasi singkat tentang saya.</p><a class="continue-button" href="profile.html">Buka Profile</a></td>
+            <td><span class="box-logo" aria-hidden="true">▣</span><h2>Gallery</h2><p>Kumpulan foto dan karya.</p><a class="continue-button" href="gallery.html">Buka Gallery</a></td>
+            <td><span class="box-logo" aria-hidden="true">@</span><h2>Contact</h2><p>Hubungi saya melalui form.</p><a class="continue-button" href="contact.html">Buka Contact</a></td>
+        </tr>
+        <tr>
+            <td class="scroll-cell"><div class="scroll-panel"><span class="box-logo" aria-hidden="true">☷</span><h2>Side Bar</h2><p>Silakan isi form dengan data yang benar.</p></div></td>
+            <td class="scroll-cell" colspan="3">
+                <div class="scroll-panel">
+                    <span class="box-logo" aria-hidden="true">@</span>
+                    <h2>Contact</h2>
+                    <p>Silakan tinggalkan pesan untuk saya.</p>
+                    <form class="contact-form">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap Anda" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan Alamat Email Anda" required>
+
+                        <label for="nomor">Nomor Telepon</label>
+                        <input type="tel" id="nomor" name="nomor" placeholder="Masukkan Nomor Telepon Anda" required>
+
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" placeholder="Silahkan Tulis Pesan Anda" required></textarea>
+
+                        <button class="continue-button" type="submit">Kirim</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr><td colspan="4">&copy; 2026 Alex Dwianto</td></tr>
+    </table>
+</body>
+
+</html>
