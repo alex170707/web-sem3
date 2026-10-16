@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>CampusHub</h1>
+        <p>Temukan kegiatan kampusmu berikutnya.</p>
+    </header>
+
+    <main>
+        <section class="events">
+            <h2>Kegiatan Kampus</h2>
+
+            <div class="event-list">
+                <article class="event-card featured">
+                    <h3>Seminar Teknologi</h3>
+                    <p>Kenali tren teknologi terbaru.</p>
+                    <a href="#registration">Lihat Detail</a>
+                </article>
+
+                <article class="event-card">
+                    <h3>Kompetisi Web</h3>
+                    <p>Uji kemampuan membangun website.</p>
+                    <a href="#registration">Lihat Detail</a>
+                </article>
+
+                <article class="event-card">
+                    <h3>Workshop AI</h3>
+                    <p>Pelajari penerapan AI secara praktis.</p>
+                    <a href="#registration">Lihat Detail</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="registration" id="registration">
+            <h2>Formulir Pendaftaran</h2>
+
+            <form id="registration-form">
+                <label for="name">Nama Mahasiswa</label>
+                <input type="text" id="name" placeholder="Masukkan nama" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nama@email.com" required>
+
+                <label for="event">Pilih Kegiatan</label>
+                <select id="event" required>
+                    <option value="">Pilih kegiatan</option>
+                    <option value="seminar">Seminar Teknologi</option>
+                    <option value="kompetisi">Kompetisi Web</option>
+                    <option value="workshop">Workshop AI</option>
+                </select>
+
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
