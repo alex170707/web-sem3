@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Diri</title>
+    <style>
+        :root {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #1e293b;
+            background: #f1f6fd;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            --color-primary: #2563eb;
+            --color-primary-dark: #1d4ed8;
+            --color-muted: #64748b;
+            --color-border: #d8e3f1;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            min-height: 100svh;
+            margin: 0;
+            padding: 32px 18px;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(ellipse at 15% 10%, #dbeafe 0, transparent 40%),
+                radial-gradient(ellipse at 90% 90%, #e0f2fe 0, transparent 36%),
+                #f1f6fd;
+        }
+
+        .card {
+            width: min(100%, 440px);
+            padding: 36px;
+            border: 1px solid rgb(216 227 241 / 85%);
+            border-radius: 22px;
+            background: rgb(255 255 255 / 94%);
+            box-shadow: 0 22px 60px rgb(30 64 110 / 12%);
+        }
+
+        h1 {
+            margin: 0;
+            color: #172554;
+            font-size: clamp(1.8rem, 5vw, 2.2rem);
+            letter-spacing: -0.045em;
+        }
+
+        h1::after {
+            display: block;
+            width: 100%;
+            height: 4px;
+            margin-top: 12px;
+            border-radius: 999px;
+            background: linear-gradient(
+                90deg,
+                #2563eb,
+                #38bdf8,
+                #818cf8,
+                #2563eb
+            );
+            background-size: 300% 100%;
+            content: "";
+            animation: title-underline-flow 3s linear infinite;
+        }
+
+        @keyframes title-underline-flow {
+            from {
+                background-position: 0% 50%;
+            }
+
+            to {
+                background-position: 100% 50%;
+            }
+        }
+
+        .intro {
+            margin: 10px 0 0;
+            color: var(--color-muted);
+            line-height: 1.6;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 28px 0 0;
+        }
+
+        .form-field {
+            display: grid;
+            gap: 8px;
+        }
+
+        label {
+            color: #334155;
+            font-size: 0.95rem;
+            font-weight: 650;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 14px;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            background: #fff;
+            color: #1e293b;
+            font: inherit;
+            transition: border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            min-height: 48px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.5;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--color-primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgb(37 99 235 / 14%);
+        }
+
+        button {
+            min-height: 50px;
+            margin-top: 2px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(120deg, var(--color-primary), #3b82f6);
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            background: var(--color-primary-dark);
+            box-shadow: 0 8px 18px rgb(37 99 235 / 22%);
+        }
+
+        button:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 22px;
+                border-radius: 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            h1::after {
+                animation: none;
+            }
+        }
+    </style>
+    <script>
+        function kirimData() {
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const phoneNumber = '6285947392762'; // Ganti dengan
+            const wa_message = `\nNama: ${nama}\nEmail: ${email}\nPesan: ${message}`;
+            const wa_url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(wa_message)}`;
+            window.open(wa_url, '_blank');
+
+            if (nama && email && message) {
+                alert(`Data berhasil dikirim!\nNama: ${nama}\nEmail: ${email}\nPesan: ${message}`);
+            } else {
+                alert(`Harap isi semua bidang sebelum mengirim.`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Form Data Diri</h1>
+        <p class="intro">Silakan isi informasi berikut dengan benar.</p>
+
+        <form>
+            <div class="form-field">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="pesan">Pesan</label>
+                <textarea id="message" name="message" placeholder="Silahkan masukkan pesan Anda..." required></textarea>
+            </div>
+
+            <button type="submit" onclick="kirimData(); return false;">Kirim Data</button>
+        </form>
+    </div>
+</body>
+
+</html>
