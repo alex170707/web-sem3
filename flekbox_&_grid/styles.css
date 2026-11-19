@@ -1,0 +1,279 @@
+:root {
+    --ink: #263a32;
+    --muted: #68766d;
+    --paper: #f4f5ef;
+    --green: #173c32;
+    --accent: #d9ec82;
+    --white: #fffefa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 560px;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--white);
+    background: var(--green);
+}
+
+.hero-image,
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    object-fit: cover;
+}
+
+.hero-shade {
+    background: rgb(15 31 24 / 52%);
+}
+
+.container,
+.site-nav {
+    width: min(100% - 40px, 1080px);
+    margin: 0 auto;
+}
+
+.site-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    border-bottom: 1px solid rgb(255 255 255 / 35%);
+}
+
+.brand {
+    color: var(--white);
+    font-family: Georgia, serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 64px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #c2d5a1;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero h1,
+.section-heading h2,
+.product-info h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.05;
+}
+
+.hero-copy > p:not(.eyebrow) {
+    max-width: 440px;
+    margin: 16px 0 22px;
+    color: #f0eee6;
+    line-height: 1.6;
+}
+
+.button {
+    padding: 11px 16px;
+    border-radius: 4px;
+    color: var(--green);
+    background: var(--accent);
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.product-section {
+    padding-top: 64px;
+    padding-bottom: 76px;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading .eyebrow {
+    color: var(--muted);
+}
+
+.section-heading h2 {
+    font-size: 2.2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.product-card {
+    overflow: hidden;
+    border-radius: 5px;
+    background: var(--white);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-origin {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+}
+
+.product-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #e1e4dc;
+    font-size: 0.82rem;
+}
+
+.product-buy a {
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: min(100% - 40px, 1080px);
+    min-height: 72px;
+    margin: 0 auto;
+    border-top: 1px solid #d9dfd5;
+}
+
+.site-footer .brand {
+    color: var(--ink);
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .container,
+    .site-nav,
+    .site-footer {
+        width: min(100% - 32px, 1080px);
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .product-section {
+        padding-top: 48px;
+        padding-bottom: 54px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 16px 0;
+    }
+}

@@ -1,0 +1,24 @@
+main-header {
+     background-color: darkgreen;
+     display: flex;
+ }
+
+ main-navigation {
+     background-color: grey;
+ }
+
+ main-container {
+     background-color: lime;
+ }
+
+ main-content {
+     background-color: aliceblue;
+ }
+
+ main-aside {
+     background-color: darkblue;
+ }
+
+ main-footer {
+     background-color: tan;
+ }
