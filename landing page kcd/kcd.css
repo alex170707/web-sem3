@@ -1,0 +1,765 @@
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #172033;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --blue: #326ce5;
+    --dark: #101827;
+    --gray: #687386;
+    --light: #f5f7fb;
+}
+
+.section {
+    padding: 100px 9%;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.brand-mark {
+    background: white;
+    color: var(--blue);
+    padding: 9px 10px;
+    border-radius: 5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #a9c6ff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    height: 100vh;
+    max-height: 900px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 120px 10% 100px;
+
+    background:
+        linear-gradient(90deg, rgba(9, 18, 38, 0.95), rgba(9, 18, 38, 0.55)),
+        url("hero.webp");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(8, 17, 35, 0.55),
+        transparent 55%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+}
+
+.hero-label {
+    color: #8eb3ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #78a5ff;
+}
+
+.hero-description {
+    color: #d3d9e5;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 25px 0 35px;
+}
+
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-bottom: 35px;
+}
+
+.info-title {
+    color: #8eb3ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.event-info p {
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+    color: #c0c8d8;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+    background: var(--dark);
+    color: white;
+    padding: 65px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.countdown-heading p {
+    color: #8eb3ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.countdown-heading h2 {
+    font-size: 27px;
+}
+
+.countdown-items {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    gap: 15px;
+}
+
+.countdown-box {
+    background: #1d2b43;
+    border: 1px solid #33435e;
+    border-radius: 8px;
+    padding: 17px 10px;
+    text-align: center;
+}
+
+.countdown-box strong {
+    display: block;
+    color: #8eb3ff;
+    font-size: 28px;
+}
+
+.countdown-box span {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #c5ccda;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-heading h2 {
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.about-heading span,
+.expect-heading span,
+.venue h2 span {
+    color: var(--blue);
+}
+
+.about-description p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #e5e9f0;
+}
+
+.stat-item {
+    text-align: center;
+    border-right: 1px solid #e5e9f0;
+}
+
+.stat-item:last-child {
+    border: none;
+}
+
+.stat-item h3 {
+    font-size: 45px;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.stat-item h3 span {
+    color: #172033;
+}
+
+.stat-item p {
+    color: var(--gray);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* =========================
+   WHAT TO EXPECT
+========================= */
+
+.expect {
+    background: var(--light);
+}
+
+.expect-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.expect-heading h2 {
+    font-size: clamp(35px, 4vw, 48px);
+    letter-spacing: -2px;
+}
+
+.expect-heading p {
+    max-width: 400px;
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.expect-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.expect-collage {
+    grid-auto-rows: minmax(150px, auto);
+    gap: 16px;
+}
+
+.expect-collage .expect-card {
+    min-height: 0;
+}
+
+.expect-collage .expect-card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(145deg, #dce8ff, #ffffff 78%);
+}
+
+.expect-collage .expect-card:nth-child(2) {
+    grid-column: span 2;
+    background: linear-gradient(120deg, #e5f5f2, #ffffff);
+}
+
+.expect-collage .expect-card:nth-child(3) {
+    background: linear-gradient(145deg, #fff1df, #ffffff);
+}
+
+.expect-collage .expect-card:nth-child(4) {
+    background: linear-gradient(145deg, #eee8ff, #ffffff);
+}
+
+.expect-card {
+    background: white;
+    padding: 30px 25px;
+    min-height: 270px;
+    border: 1px solid #e9edf4;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.expect-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(22, 43, 79, 0.08);
+}
+
+.card-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #c7d4eb;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.expect-card h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.expect-card p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* =========================
+   VENUE
+========================= */
+
+.venue {
+    background:
+        linear-gradient(rgba(12, 27, 54, 0.91), rgba(12, 27, 54, 0.91)),
+        url("hero.webp");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.venue-content {
+    max-width: 750px;
+}
+
+.venue h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.venue-content > p {
+    color: #c4cede;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.venue-detail {
+    display: flex;
+    gap: 70px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.venue-detail span {
+    color: #8eb3ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.venue-detail h3 {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    background: var(--blue);
+    padding: 85px 9%;
+    text-align: center;
+    color: white;
+}
+
+.cta p {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.cta h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.3;
+}
+
+.cta a {
+    display: inline-block;
+    background: white;
+    color: var(--blue);
+    padding: 15px 28px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.cta a:hover {
+    background: #eaf0ff;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #0c1422;
+    color: white;
+    padding: 70px 9% 25px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 55px;
+}
+
+.footer-brand h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-brand h2 span {
+    color: #78a5ff;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    color: #aab4c4;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-column h3 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #aab4c4;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #263247;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #8793a6;
+    font-size: 10px;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navigation {
+        gap: 13px;
+    }
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .expect-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .countdown {
+        padding: 55px 6%;
+    }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 75px;
+        flex-wrap: wrap;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .navigation a {
+        white-space: nowrap;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 750px;
+        height: auto;
+        padding: 180px 7% 100px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .event-info {
+        gap: 25px;
+    }
+
+    .event-info p {
+        font-size: 12px;
+    }
+
+    .hero-bottom {
+        left: 7%;
+        right: 7%;
+        font-size: 7px;
+        gap: 15px;
+    }
+
+    .countdown {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .countdown-items {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7px;
+    }
+
+    .countdown-box {
+        padding: 15px 5px;
+    }
+
+    .countdown-box strong {
+        font-size: 22px;
+    }
+
+    .countdown-box span {
+        font-size: 8px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .stat-item:nth-child(2) {
+        border: none;
+    }
+
+    .stat-item h3 {
+        font-size: 35px;
+    }
+
+    .expect-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .expect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expect-collage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(160px, auto);
+    }
+
+    .venue-detail {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        line-height: 1.8;
+    }
+}
